@@ -6,11 +6,10 @@ class Voiture{
    protected string $_marque;
    protected string $_modele;
    protected string $_poids;
-   private Moteur $_moteur;
-   // protected int $_maxspeed ;
+   protected Moteur $_marqueMoteur;
 
    ################## CONSTRUCTOR ##################
-   public function __construct (string $marque, string $modele, int $poids, string $marqueMoteur, int $maxSpeed)
+   public function __construct (string $marque, string $modele, int $poids, Moteur $marqueMoteur, int $maxSpeed)
     {
       $this->SetMarque($marque);
       $this->SetModele($modele);
@@ -76,6 +75,13 @@ class Voiture{
    {
       return "Marque : $this->_marque\nModele : $this->_modele\nPoids : $this->_poids";
    }
+
+   public function setMaxSpeed () : int 
+   {
+      return $this->_marqueMoteur->getMaxSpeed() - ($this->getPoids() * 30 /100);
+   }
+
+
 }
 
 #Consignes

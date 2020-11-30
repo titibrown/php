@@ -37,10 +37,14 @@ plus modifiable ensuite.
     /** @var int */
     private int $_id;
     
+    private Adresse $adresse
+    
     /**@var int */
 
     public function __construct(int $id, string $info)
     {
+
+        
 
         $this->setId($id);
 
