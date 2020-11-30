@@ -11,25 +11,22 @@
 
 class VoitureSport extends Voiture {
 
- 
-   protected int $_maxspeedsport ;
-   protected string $_configuration ;
+ private string $_configuration
 
 
-public function __construct (int $maxspeedsport, string $configuration)
+public function __construct (string $marque, string $modele, string $, int $maxSpeed, int $poids)
  {
   
-   parents__construct(string $marque,string $modele, string $poids,$marqueMoteur)
+   parents__construct(string $marque,string $modele, string $poids, $maxSpeed, $poids);
   
    $this->setConfiguration($configuration);
-   $this->setMaxSpeedSport($maxspeedsport);
 
 
   }
 
 public function setConfiguration(string $configuration)
 {
-   if ($moteur === $marque)
+   if ($marqueMoteur === $marque)
    {
       $this->_configuration = $configuration;
    }else
@@ -46,9 +43,9 @@ public function getConfiguration() : string
 }
 
 
-public function setMaxSpeedSport($maxspeedsport)
+public function getMaxSpeed() : int
 {
-   return $this->Moteur->
+   return $this->Moteur->getMaxSpeed() - ($this->getPoids() * 5 / 100);
 }
 
 
