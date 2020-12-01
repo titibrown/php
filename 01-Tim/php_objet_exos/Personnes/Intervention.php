@@ -9,7 +9,7 @@ class Intervention
 private DateTime $_datetime;
 private string $_description;
 
-public function __construct(DateTime $datetime, string $_description )
+public function __construct(DateTime $datetime, string $description )
 {
  $this->setDateTime($datetime);
  $this->setDescription($description);
@@ -24,14 +24,14 @@ public function setDateTime(Datetime $datetime)
 }
 
 
-public function setDescription(string $_description) 
+public function setDescription(string $description) 
 {
     $this->_description = $description;
 }
 
 
 
-public function getDateTime() : getDateTime
+public function getDateTime() : DateTime
 {
     return $this->_datetime;
 }

@@ -23,7 +23,7 @@ class Intervenant extends Personne  {
 
     public function setAutreRevenue($autrerevenue)
     {
-        $this->_autrerevenue = $revenue 
+        $this->_autrerevenue = $revenue;
 
 
     }
@@ -32,7 +32,7 @@ class Intervenant extends Personne  {
     public function getSalaire() : int   
     {
 
-        return $this->$salaire;
+        return $this->salaire;
 
     }
 

@@ -21,10 +21,10 @@ class Moteur
     }
 
     ################## SETTERS ##################
-    public function setMoteur ($marqueMoteur)
+    public function setMoteur (string $marqueMoteur)
     {
         if (empty($marqueMoteur))
-        {s
+        {
             $this->_marqueMoteur = 'Indéfinie'; 
         }
         else
@@ -33,7 +33,7 @@ class Moteur
         }
     }
 
-    public function setMaxSpeed(int $maxSpeed)
+    public function setMaxSpeed(int $maxSpeed) : void
     {
         if (empty($maxSpeed) || $maxSpeed < 0)
         {
@@ -54,5 +54,13 @@ class Moteur
     public function getMaxSpeed() : int
     {
         return $this->_maxSpeed;
+    }
+
+    /**
+     * Get the value of _marqueMoteur
+     */ 
+    public function getMarque()
+    {
+        return $this->_marqueMoteur;
     }
 }   
