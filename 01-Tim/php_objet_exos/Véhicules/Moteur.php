@@ -9,50 +9,58 @@ vitesse maximale d’une voiture:Voiture.vitesseMax=Moteur.vitesseMax-(Voiture.p
 
 class Moteur
 {
-    private string $_marqueMoteur; 
+    private string $_moteur; 
     private int $_maxSpeed;
+    
 
     ################## CONSTRUCTOR ##################
 
-    public function __construct(string $marqueMoteur, int $maxSpeed)
+    public function __construct(string $moteur, int $maxSpeed)
     {
-        $this->setMoteur ($marqueMoteur);
+        $this->setMoteur ($moteur);
         $this->setMaxSpeed ($maxSpeed);
     }
 
     ################## SETTERS ##################
-    public function setMoteur ($marqueMoteur)
+    public function setMoteur ($moteur)
     {
-        if (empty($marqueMoteur))
-        {s
-            $this->_marqueMoteur = 'Indéfinie'; 
+        if (empty($moteur))
+        {
+            $this->_moteur = 'Indéfinie'; 
         }
         else
         {
-            $this->_marqueMoteur = $marqueMoteur;
+            $this->_moteur = $moteur;
         }
     }
 
-    public function setMaxSpeed(int $maxSpeed)
+    public function setMaxSpeed(int $maxSpeed) : void
     {
         if (empty($maxSpeed) || $maxSpeed < 0)
         {
-            $this->_maxSpeeed = 0; 
+            $this->_maxSpeed = 0; 
         }
         else
         {
-            $this->_maxSpeeed = $maxSpeed;
+            $this->_maxSpeed = $maxSpeed;
         }
     }
 
     ################## GETTERS ##################
     public function GetMoteur() : string
     {
-        return $this->_marqueMoteur;
+        return $this->_moteur;
     } 
 
     public function getMaxSpeed() : int
     {
         return $this->_maxSpeed;
     }
+
+public function getMarque()
+    {
+        return $this->_moteur;
+    }
+)
+
 }   

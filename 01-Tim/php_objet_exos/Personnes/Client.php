@@ -1,7 +1,7 @@
 <?php 
 
 
-require 'Adresse.php
+require 'Adresse.php';
 
 
 '
@@ -31,13 +31,13 @@ rue, un nom de rue, un code postal et un nom de commune. Le numéro de client es
 plus modifiable ensuite.
   */
 
-    class Client extends Personne
+class Client extends Personne
 {
     
     /** @var int */
     private int $_id;
     
-    private Adresse $adresse
+    private Adresse $adresse;
     
     /**@var int */
 
@@ -48,7 +48,7 @@ plus modifiable ensuite.
 
         $this->setId($id);
 
-        $this->getInfo($info) ;
+        $this->getInfo($info);
 
 
     }

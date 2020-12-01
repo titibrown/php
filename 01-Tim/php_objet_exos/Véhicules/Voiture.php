@@ -6,15 +6,16 @@ class Voiture{
    protected string $_marque;
    protected string $_modele;
    protected string $_poids;
-   protected Moteur $_marqueMoteur;
+   protected Moteur $_moteur;
+
 
    ################## CONSTRUCTOR ##################
-   public function __construct (string $marque, string $modele, int $poids, Moteur $marqueMoteur, int $maxSpeed)
+   public function __construct (string $marque, string $modele, int $poids, Moteur $moteur, int $maxSpeed)
     {
       $this->SetMarque($marque);
       $this->SetModele($modele);
       $this->SetPoids($poids);
-      $this->SetMoteur($marqueMoteur, $maxSpeed);
+      $this->SetMoteur($moteur);
    }
 
    ################## SETTERS ##################
@@ -49,9 +50,9 @@ class Voiture{
       }
    }
    
-   public function SetMoteur(string $marqueMoteur, int $maxSpeed)
+   public function SetMoteur(string $moteur)
    {
-      $this->
+      $this->_moteur= $moteur
    }
 
    ################## GETTERS ##################

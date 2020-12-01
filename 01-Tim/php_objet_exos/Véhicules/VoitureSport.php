@@ -9,40 +9,23 @@
  */
 
 
-class VoitureSport extends Voiture {
-
- private string $_configuration
-
-
-public function __construct (string $marque, string $modele, string $, int $maxSpeed, int $poids)
+class VoitureSport extends Voiture
  {
+
+
+
+public function __construct (string $marque, string $modele, string $poids, Moteur $moteur, int $maxSpeed)
+    {
   
-   parents__construct(string $marque,string $modele, string $poids, $maxSpeed, $poids);
+   parent::__construct( $marque, $modele,  $poids,  $maxSpeed, $poids);
   
-   $this->setConfiguration($configuration);
 
-
-  }
-
-public function setConfiguration(string $configuration)
-{
-   if ($marqueMoteur === $marque)
+   if ($this->_marque !== $this->_moteur->getMarque())
    {
-      $this->_configuration = $configuration;
-   }else
-   {
-      echo "Vous disposer d'un modèle classique contenant un moteur de marque différente de celui de votre voiture  "
+      throw new Execption ("La marque de la voiture et du moteurs sont différents");
    }
-
-
-}
-
-public function getConfiguration() : string
-{
-   return $this->_configuration;
-}
-
-
+      
+ 
 public function getMaxSpeed() : int
 {
    return $this->Moteur->getMaxSpeed() - ($this->getPoids() * 5 / 100);
