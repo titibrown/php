@@ -1,6 +1,6 @@
 <?php
 
-/*  Héritage */
+/*  https://www.youtube.com/watch?v=Wh0aRwvZigc&list=PLrSOXFDHBtfFuZttC17M-jNpKnzUL5Adc&index=25&ab_channel=FormationVid%C3%A9o  */
 
 abstract class Mere
 {
